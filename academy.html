@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Academy - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academy.html" class="active">Academy</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="couples.html">Couples</a></li>
+                    <li><a href="affiliate.html">Earn</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Academy Hero -->
+    <section class="page-hero academy-hero">
+        <div class="container">
+            <h1>Creator <span class="gold-text">Academy</span></h1>
+            <p>Learn from master artists and earn certificates</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <select class="filter-select" id="typeFilter">
+                    <option value="all">Craft Type</option>
+                    <option value="Watercolor">Watercolor</option>
+                    <option value="Calligraphy">Calligraphy</option>
+                    <option value="Paper Crafting">Paper Crafting</option>
+                    <option value="Digital Art">Digital Art</option>
+                </select>
+                <select class="filter-select" id="difficultyFilter">
+                    <option value="all">Difficulty</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <select class="filter-select" id="durationFilter">
+                    <option value="all">Duration</option>
+                    <option value="Under 2 hours">Under 2 hours</option>
+                    <option value="2-6 hours">2-6 hours</option>
+                    <option value="Comprehensive">Comprehensive</option>
+                </select>
+                <select class="filter-select" id="priceFilter">
+                    <option value="all">Price</option>
+                    <option value="Free">Free</option>
+                    <option value="Premium">Premium</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Grid -->
+    <section class="course-catalog">
+        <div class="container">
+            <div class="courses-grid" id="courseGrid">
+                <div class="course-card large" data-type="Watercolor" data-difficulty="Advanced" data-duration="Comprehensive" data-price="Premium">
+                    <div class="course-badge bestseller">Bestseller</div>
+                    <div class="course-image" style="background-image: url('enroll/Complete Watercolor Mastery.webp');"></div>
+                    <h3>Complete Watercolor Mastery</h3>
+                    <p class="instructor">by Priya Sharma</p>
+                    <div class="course-meta">
+                        <span>24 lessons</span>
+                        <span>•</span>
+                        <span>8 hours</span>
+                    </div>
+                    <p class="students">5,678 students</p>
+                    <div class="rating">★★★★★ (4.8)</div>
+                    <p class="course-price">₹1,299</p>
+                    <a href="signup.html" class="btn btn-primary btn-block text-center">Enroll Now</a>
+                </div>
+
+                <div class="course-card large" data-type="Calligraphy" data-difficulty="Intermediate" data-duration="2-6 hours" data-price="Premium">
+                    <div class="course-badge new">New</div>
+                    <div class="course-image" style="background-image: url('enroll/Modern Calligraphy.webp');"></div>
+                    <h3>Modern Calligraphy</h3>
+                    <p class="instructor">by Arjun Singh</p>
+                    <div class="course-meta">
+                        <span>18 lessons</span>
+                        <span>•</span>
+                        <span>5 hours</span>
+                    </div>
+                    <p class="students">2,345 students</p>
+                    <div class="rating">★★★★★ (4.9)</div>
+                    <p class="course-price">₹899</p>
+                    <a href="signup.html" class="btn btn-primary btn-block text-center">Enroll Now</a>
+                </div>
+
+                <div class="course-card large" data-type="Digital Art" data-difficulty="Beginner" data-duration="2-6 hours" data-price="Premium">
+                    <div class="course-image" style="background-image: url('enroll/Digital Art for Beginners.jpg');"></div>
+                    <h3>Digital Art for Beginners</h3>
+                    <p class="instructor">by Riya Patel</p>
+                    <div class="course-meta">
+                        <span>15 lessons</span>
+                        <span>•</span>
+                        <span>4 hours</span>
+                    </div>
+                    <p class="students">4,567 students</p>
+                    <div class="rating">★★★★★ (4.7)</div>
+                    <p class="course-price">₹699</p>
+                    <a href="signup.html" class="btn btn-primary btn-block text-center">Enroll Now</a>
+                </div>
+
+                <div class="course-card large" data-type="Paper Crafting" data-difficulty="Beginner" data-duration="2-6 hours" data-price="Free">
+                    <div class="course-image" style="background-image: url('enroll/Paper Crafting 101.webp');"></div>
+                    <h3>Paper Crafting 101</h3>
+                    <p class="instructor">by Meera Kapoor</p>
+                    <div class="course-meta">
+                        <span>12 lessons</span>
+                        <span>•</span>
+                        <span>3 hours</span>
+                    </div>
+                    <p class="students">3,234 students</p>
+                    <div class="rating">★★★★★ (4.6)</div>
+                    <p class="course-price">Free</p>
+                    <a href="signup.html" class="btn btn-outline btn-block text-center">Start Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points System -->
+    <section class="points-system">
+        <div class="container">
+            <h2 class="section-title">Your <span class="gold-text">Progress</span></h2>
+            <div class="points-card">
+                <div class="points-header">
+                    <h3>Creative Beginner</h3>
+                    <span class="points">350/500 points</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 70%;"></div>
+                </div>
+                <div class="points-grid">
+                    <div class="point-item">Daily Login: +10</div>
+                    <div class="point-item">Lesson Complete: +50</div>
+                    <div class="point-item">Course Complete: +500</div>
+                </div>
+                <div class="badges-earned">
+                    <span class="badge-gold">🏆 First Steps</span>
+                    <span class="badge-silver">📅 7 Day Streak</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Video Player -->
+    <section class="video-demo">
+        <div class="container">
+            <h2 class="section-title">Try a <span class="gold-text">Free Lesson</span></h2>
+            <div class="video-player">
+                <div class="video-placeholder">
+                    <div id="ytPlayer"></div>
+                </div>
+                <div class="video-controls">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                    <div class="controls">
+                        <span data-rate="0.5">0.5x</span>
+                        <span data-rate="1">1x</span>
+                        <span data-rate="1.5">1.5x</span>
+                        <span data-rate="2">2x</span>
+                        <span id="toggleBtn">Play/Pause</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+    var player;
+    var progressTimer;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('ytPlayer', {
+        height: '100%',
+        width: '100%',
+        videoId: 'tDdfPMTX15Y',
+        playerVars: { rel: 0, modestbranding: 1, playsinline: 1 },
+        events: { 'onReady': onPlayerReady }
+      });
+    }
+    function onPlayerReady() {
+      var rates = document.querySelectorAll('.controls [data-rate]');
+      rates.forEach(function(el){ el.addEventListener('click', function(){ player.setPlaybackRate(parseFloat(el.getAttribute('data-rate'))); }); });
+      var toggleBtn = document.getElementById('toggleBtn');
+      function togglePlay() {
+        var state = player.getPlayerState();
+        if (state === YT.PlayerState.PLAYING) { player.pauseVideo(); } else { player.playVideo(); }
+      }
+      toggleBtn.addEventListener('click', togglePlay);
+      progressTimer = setInterval(function(){
+        var d = player.getDuration();
+        var c = player.getCurrentTime();
+        var pct = d ? (c / d) * 100 : 0;
+        var pf = document.getElementById('progressFill');
+        if (pf) pf.style.width = pct + '%';
+      }, 500);
+    }
+
+    // Filter Functionality
+    const filters = {
+        type: document.getElementById('typeFilter'),
+        difficulty: document.getElementById('difficultyFilter'),
+        duration: document.getElementById('durationFilter'),
+        price: document.getElementById('priceFilter')
+    };
+
+    const courseCards = document.querySelectorAll('.course-card');
+
+    function applyFilters() {
+        const activeFilters = {
+            type: filters.type.value,
+            difficulty: filters.difficulty.value,
+            duration: filters.duration.value,
+            price: filters.price.value
+        };
+
+        courseCards.forEach(card => {
+            const cardData = {
+                type: card.dataset.type,
+                difficulty: card.dataset.difficulty,
+                duration: card.dataset.duration,
+                price: card.dataset.price
+            };
+
+            let isVisible = true;
+            for (let key in activeFilters) {
+                if (activeFilters[key] !== 'all' && activeFilters[key] !== cardData[key]) {
+                    isVisible = false;
+                    break;
+                }
+            }
+
+            card.style.display = isVisible ? 'block' : 'none';
+        });
+    }
+
+    Object.values(filters).forEach(filter => {
+        filter.addEventListener('change', applyFilters);
+    });
+    </script>
+</body>
+</html>

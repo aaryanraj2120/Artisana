@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="couples.html">Couples</a></li>
+                    <li><a href="affiliate.html">Earn</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <div class="user-menu">
+                        <span class="user-greeting">Hi, <span id="displayName">User</span>!</span>
+                        <div class="user-avatar">👤</div>
+                        <div class="dropdown-menu">
+                            <a href="user-dashboard.html">Dashboard</a>
+                            <a href="profile.html">Profile</a>
+                            <a href="my-courses.html">My Courses</a>
+                            <a href="orders.html">Orders</a>
+                            <a href="earnings.html">Earnings</a>
+                            <a href="#" onclick="logout()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Banner (shown only on first login) -->
+    <div id="welcomeBanner" class="welcome-banner" style="display: none;">
+        <div class="container">
+            <div class="welcome-content">
+                <h2>🎉 Welcome to Artisana, <span id="welcomeName"></span>!</h2>
+                <p>Your creative journey begins now. Here's what you can do:</p>
+                <div class="welcome-steps">
+                    <span>1️⃣ Complete your profile</span>
+                    <span>2️⃣ Take your first lesson</span>
+                    <span>3️⃣ Earn your first badge</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Main Content -->
+    <div class="dashboard-full">
+        <div class="container">
+            <!-- User Stats -->
+            <div class="user-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-details">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Courses in Progress</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-details">
+                        <span class="stat-value">1,250</span>
+                        <span class="stat-label">Points Earned</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-details">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Badges</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-details">
+                        <span class="stat-value">₹450</span>
+                        <span class="stat-label">Affiliate Earnings</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Progress -->
+            <div class="level-card">
+                <div class="level-header">
+                    <div>
+                        <h3>Creative Beginner</h3>
+                        <p>Level 1 · 1,250 / 2,000 points to next level</p>
+                    </div>
+                    <span class="level-badge">Skilled Artisan (Next)</span>
+                </div>
+                <div class="progress-bar large">
+                    <div class="progress-fill" style="width: 62.5%;"></div>
+                </div>
+                <div class="level-benefits">
+                    <div class="benefit unlocked">✓ Daily Login Bonus</div>
+                    <div class="benefit unlocked">✓ Basic Courses</div>
+                    <div class="benefit locked">🔒 Exclusive Community</div>
+                    <div class="benefit locked">🔒 10% Commission</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity & Recommendations -->
+            <div class="dashboard-grid">
+                <!-- Left Column - Recent Activity -->
+                <div class="dashboard-col">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <span class="time">2 hours ago</span>
+                            <p>Completed "Watercolor Basics" Lesson 3</p>
+                            <span class="points">+50 points</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="time">Yesterday</span>
+                            <p>Added "Spotify Frame" to cart</p>
+                        </div>
+                        <div class="activity-item">
+                            <span class="time">2 days ago</span>
+                            <p>Earned "First Steps" badge</p>
+                            <span class="badge-gold small">🏆 First Steps</span>
+                        </div>
+                        <div class="activity-item">
+                            <span class="time">3 days ago</span>
+                            <p>Referred a friend</p>
+                            <span class="points">+100 points</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Recommendations -->
+                <div class="dashboard-col">
+                    <h3>Recommended for You</h3>
+                    <div class="recommendations">
+                        <div class="rec-card">
+                            <div class="rec-image" style="background: #F8E8E8;"></div>
+                            <div class="rec-details">
+                                <h4>Advanced Calligraphy</h4>
+                                <p>Based on your interest</p>
+                                <a href="#" class="btn btn-outline btn-small">View Course</a>
+                            </div>
+                        </div>
+                        <div class="rec-card">
+                            <div class="rec-image" style="background: #FFF0E5;"></div>
+                            <div class="rec-details">
+                                <h4>Digital Art Masterclass</h4>
+                                <p>Popular in your region</p>
+                                <a href="#" class="btn btn-outline btn-small">View Course</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions-grid">
+                <h3>Quick Actions</h3>
+                <div class="actions-row">
+                    <a href="academy.html" class="action-chip">📚 Continue Learning</a>
+                    <a href="store.html" class="action-chip">🛍️ Shop Gifts</a>
+                    <a href="affiliate.html" class="action-chip">💰 Check Earnings</a>
+                    <a href="profile.html" class="action-chip">👤 Edit Profile</a>
+                </div>
+            </div>
+
+            <!-- Certificates Section -->
+            <div class="certificates-section">
+                <h3>Your Certificates</h3>
+                <div class="certificates-grid">
+                    <div class="certificate-card">
+                        <div class="certificate-icon">📜</div>
+                        <div class="certificate-info">
+                            <h4>Watercolor Basics</h4>
+                            <p>Completed on 15 March 2024</p>
+                            <span class="certificate-badge">Verified</span>
+                        </div>
+                        <button class="btn btn-outline btn-small">Download</button>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-icon">📜</div>
+                        <div class="certificate-info">
+                            <h4>Calligraphy 101</h4>
+                            <p>Completed on 10 March 2024</p>
+                            <span class="certificate-badge">Verified</span>
+                        </div>
+                        <button class="btn btn-outline btn-small">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load user data on page load
+        window.onload = function() {
+            const userName = localStorage.getItem('userName') || 'User';
+            const userType = localStorage.getItem('userType') || 'enthusiast';
+            const urlParams = new URLSearchParams(window.location.search);
+            const welcome = urlParams.get('welcome');
+            
+            // Display user name
+            document.getElementById('displayName').textContent = userName.split(' ')[0];
+            
+            // Show welcome banner if new signup
+            if (welcome === 'true') {
+                document.getElementById('welcomeBanner').style.display = 'block';
+                document.getElementById('welcomeName').textContent = userName;
+                
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('welcomeBanner').style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        function logout() {
+            // Clear user data
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userEmail');
+            localStorage.removeItem('userType');
+            localStorage.removeItem('userPoints');
+            localStorage.removeItem('userLevel');
+            
+            // Redirect to home
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

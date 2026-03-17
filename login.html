@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <h2>Welcome Back!</h2>
+                <p>Login to continue your creative journey</p>
+            </div>
+
+            <form class="auth-form" id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    <span class="forgot-password">Forgot password?</span>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-outline btn-social">
+                        <span class="social-icon">G</span> Google
+                    </button>
+                    <button class="btn btn-outline btn-social">
+                        <span class="social-icon">f</span> Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                    <p class="guest-link"><a href="guest-dashboard.html">Continue as Guest →</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="auth-features">
+            <div class="feature-item">
+                <span class="feature-icon">🎨</span>
+                <h4>Learn New Skills</h4>
+                <p>Access 100+ creative courses</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🛍️</span>
+                <h4>Shop Handmade</h4>
+                <p>Personalized gifts for loved ones</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">💰</span>
+                <h4>Earn Money</h4>
+                <p>Join our affiliate program</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Simulate login - in real app, this would validate with backend
+            if (email && password) {
+                // Store user session
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userType', 'registered');
+                localStorage.setItem('userName', email.split('@')[0]);
+                
+                // Redirect to dashboard
+                window.location.href = 'user-dashboard.html';
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

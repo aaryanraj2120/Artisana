@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <h2>Create Your Account</h2>
+                <p>Join the creative community today</p>
+            </div>
+
+            <form class="auth-form" id="signupForm" onsubmit="return handleSignup(event)">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="First name" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Last name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Create password" required>
+                    <small class="password-hint">Must be at least 8 characters</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>I am a:</label>
+                    <div class="user-type-selector">
+                        <label class="user-type">
+                            <input type="radio" name="userType" value="enthusiast" checked>
+                            <span>Creative Enthusiast</span>
+                        </label>
+                        <label class="user-type">
+                            <input type="radio" name="userType" value="entrepreneur">
+                            <span>Aspiring Entrepreneur</span>
+                        </label>
+                        <label class="user-type">
+                            <input type="radio" name="userType" value="learner">
+                            <span>Skill Builder</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-outline btn-social">
+                        <span class="social-icon">G</span> Sign up with Google
+                    </button>
+                    <button class="btn btn-outline btn-social">
+                        <span class="social-icon">f</span> Sign up with Facebook
+                    </button>
+                </div>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                    <p class="guest-link"><a href="guest-dashboard.html">Continue as Guest →</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Get selected user type
+            const userType = document.querySelector('input[name="userType"]:checked').value;
+            
+            // Validation
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+            
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long');
+                return false;
+            }
+            
+            // Store user data
+            localStorage.setItem('userName', firstName + ' ' + lastName);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userType', userType);
+            localStorage.setItem('userPoints', '0');
+            localStorage.setItem('userLevel', 'Creative Beginner');
+            
+            // Redirect to onboarding
+            window.location.href = 'user-dashboard.html?welcome=true';
+            
+            return false;
+        }
+    </script>
+</body>
+</html>
