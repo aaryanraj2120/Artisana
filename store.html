@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handmade Store - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="store.html" class="active">Store</a></li>
+                    <li><a href="couples.html">Couples</a></li>
+                    <li><a href="affiliate.html">Earn</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Store Hero -->
+    <section class="page-hero store-hero">
+        <div class="container">
+            <h1>Handmade <span class="gold-text">Treasures</span></h1>
+            <p>Each piece tells a unique story</p>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-pills" id="categoryPills">
+                <span class="category-pill active" data-category="All">All</span>
+                <span class="category-pill" data-category="Personalized">Personalized</span>
+                <span class="category-pill" data-category="Couples">Couples</span>
+                <span class="category-pill" data-category="Anniversary">Anniversary</span>
+                <span class="category-pill" data-category="Wedding">Wedding</span>
+                <span class="category-pill" data-category="Birthday">Birthday</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid detailed" id="productsGrid">
+                <div class="product-card premium" data-categories="Personalized Couples">
+                    <div class="product-image" id="spotifyProductGallery">
+                        <img src="Spotify Glass Frame/61jzNCQjc0L._AC_UF1000,1000_QL80_.jpg" alt="Spotify Frame 1">
+                        <img src="Spotify Glass Frame/71G_9e99G5L._SL1500_700x700.webp" alt="Spotify Frame 2">
+                        <img src="Spotify Glass Frame/8aede47e0275d8aa3050ca1c530c8064.jpg" alt="Spotify Frame 3">
+                        <img src="Spotify Glass Frame/Abbloospotifyframe_1.webp" alt="Spotify Frame 4">
+                        <img src="Spotify Glass Frame/IMG_20230227_132037-scaled.jpg.webp" alt="Spotify Frame 5">
+                        <img src="Spotify Glass Frame/Screenshot-at-Jul-06-23-30-11-720x540.png" alt="Spotify Frame 6">
+                        <div class="image-counter">6 photos</div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Spotify Glass Frame</h3>
+                        <p class="price">₹1,299</p>
+                        <div class="rating">★★★★★ (234 reviews)</div>
+                        <div class="product-tags">
+                            <span class="tag">Personalize</span>
+                            <span class="tag">Couples</span>
+                        </div>
+                        <div class="personalization-preview">
+                            <small>Preview:</small>
+                            <p id="livePreviewText">"Arjun & Priya • 5 Years • Perfect"</p>
+                        </div>
+                        <a href="#customize-section" class="btn btn-primary btn-block text-center">Customize Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card premium" data-categories="Personalized Couples Wedding">
+                    <div class="product-image" id="coupleArtProductGallery">
+                        <img src="Couple Name Art/14X14-Couple-Names-Stringart-3.webp" alt="Couple Art 1">
+                        <img src="Couple Name Art/3ab5e76403d90953dd6e0a3550526bf0.jpg" alt="Couple Art 2">
+                        <img src="Couple Name Art/483ad1883103256106e735626e043534.jpg" alt="Couple Art 3">
+                        <img src="Couple Name Art/IMG_6138-scaled.jpg" alt="Couple Art 4">
+                        <img src="Couple Name Art/PDP-19_7afd9acd-9d74-4586-aabc-67b583660e8d.webp" alt="Couple Art 5">
+                        <img src="Couple Name Art/images (1).jpg" alt="Couple Art 6">
+                        <img src="Couple Name Art/images.jpg" alt="Couple Art 7">
+                        <img src="Couple Name Art/plankandnails_stringsart_Circle_pdp_1.jpg" alt="Couple Art 8">
+                        <div class="image-counter">8 photos</div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Couple Name Art</h3>
+                        <p class="price">₹899</p>
+                        <div class="rating">★★★★★ (567 reviews)</div>
+                        <div class="product-tags">
+                            <span class="tag">Personalize</span>
+                            <span class="tag">Romantic</span>
+                        </div>
+                        <div class="personalization-preview">
+                            <small>Preview:</small>
+                            <p id="livePreviewArtText">"Rahul & Neha • Forever"</p>
+                        </div>
+                        <a href="#customize-section" class="btn btn-primary btn-block text-center">Customize Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card premium" data-categories="Personalized Anniversary Wedding">
+                    <div class="product-image" id="jarProductGallery">
+                        <img src="Memory Jar with Notes/801-create-memory-jar-1a.jpg" alt="Jar 1">
+                        <img src="Memory Jar with Notes/91QzOhzZ4UL.jpg" alt="Jar 2">
+                        <img src="Memory Jar with Notes/Glass-Memory-Jar-3.webp" alt="Jar 3">
+                        <img src="Memory Jar with Notes/New-Years-Memory-Jar-Printable-2.jpg" alt="Jar 4">
+                        <img src="Memory Jar with Notes/b10b37b623b4ccb64fd32c640f7498b8.jpg" alt="Jar 5">
+                        <img src="Memory Jar with Notes/images (1).jpg" alt="Jar 6">
+                        <img src="Memory Jar with Notes/images (2).jpg" alt="Jar 7">
+                        <img src="Memory Jar with Notes/images (3).jpg" alt="Jar 8">
+                        <img src="Memory Jar with Notes/images (4).jpg" alt="Jar 9">
+                        <img src="Memory Jar with Notes/images (5).jpg" alt="Jar 10">
+                        <img src="Memory Jar with Notes/images.jpg" alt="Jar 11">
+                        <img src="Memory Jar with Notes/nastenkapeka.avif" alt="Jar 12">
+                        <div class="image-counter">12 photos</div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Memory Jar with Notes</h3>
+                        <p class="price">₹1,499</p>
+                        <div class="rating">★★★★★ (128 reviews)</div>
+                        <div class="product-tags">
+                            <span class="tag">Personalize</span>
+                            <span class="tag">Anniversary</span>
+                        </div>
+                        <div class="personalization-preview">
+                            <small>Preview:</small>
+                            <p id="livePreviewJarText">"Our First Year • 52 Memories"</p>
+                        </div>
+                        <a href="#customize-jar-section" class="btn btn-primary btn-block text-center">Customize Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card premium" data-categories="Personalized Birthday Wedding">
+                    <div class="product-image" id="portraitProductGallery">
+                        <img src="Custom Portrait/123_2048x.webp" alt="Portrait 1">
+                        <img src="Custom Portrait/61i44PblJ9L.jpg" alt="Portrait 2">
+                        <img src="Custom Portrait/Custom-portrait-illustration-Frame-scaled.jpg" alt="Portrait 3">
+                        <img src="Custom Portrait/Untitled-design-43-1.webp" alt="Portrait 4">
+                        <img src="Custom Portrait/images (1).jpg" alt="Portrait 5">
+                        <img src="Custom Portrait/images (2).jpg" alt="Portrait 6">
+                        <img src="Custom Portrait/images (3).jpg" alt="Portrait 7">
+                        <img src="Custom Portrait/images (4).jpg" alt="Portrait 8">
+                        <img src="Custom Portrait/images (5).jpg" alt="Portrait 9">
+                        <img src="Custom Portrait/images (6).jpg" alt="Portrait 10">
+                        <img src="Custom Portrait/images.jpg" alt="Portrait 11">
+                        <div class="image-counter">11 photos</div>
+                    </div>
+                    <div class="product-details">
+                        <h3>Custom Portrait</h3>
+                        <p class="price">₹2,499</p>
+                        <div class="rating">★★★★★ (89 reviews)</div>
+                        <div class="product-tags">
+                            <span class="tag">Premium</span>
+                            <span class="tag">Hand-painted</span>
+                        </div>
+                        <a href="signup.html" class="btn btn-primary btn-block text-center">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Demo -->
+    <section class="customization-demo" id="customize-section">
+        <div class="container">
+            <h2 class="section-title">Customize <span class="gold-text">Spotify Frame</span></h2>
+            <div class="customizer">
+                <div class="preview-area">
+                    <div class="product-preview">
+                        <div class="auto-scroll-gallery" id="autoGallery">
+                            <img src="Spotify Glass Frame/61jzNCQjc0L._AC_UF1000,1000_QL80_.jpg" alt="Spotify Frame 1">
+                            <img src="Spotify Glass Frame/71G_9e99G5L._SL1500_700x700.webp" alt="Spotify Frame 2">
+                            <img src="Spotify Glass Frame/8aede47e0275d8aa3050ca1c530c8064.jpg" alt="Spotify Frame 3">
+                            <img src="Spotify Glass Frame/Abbloospotifyframe_1.webp" alt="Spotify Frame 4">
+                            <img src="Spotify Glass Frame/IMG_20230227_132037-scaled.jpg.webp" alt="Spotify Frame 5">
+                            <img src="Spotify Glass Frame/Screenshot-at-Jul-06-23-30-11-720x540.png" alt="Spotify Frame 6">
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="preview-content-box">
+                                <div class="preview-text" id="previewNames">Arjun & Priya</div>
+                                <div class="preview-subtext" id="previewDetails">"Perfect" • 5 Years</div>
+                                <div class="spotify-embed-container">
+                                    <div class="spotify-custom-player">
+                                        <div class="song-info-display">
+                                            <span class="song-title-display" id="playerSongTitle">Perfect</span>
+                                            <span class="song-artist-display" id="playerSongArtist">Ed Sheeran</span>
+                                        </div>
+                                        <div class="playback-bar">
+                                            <div class="playback-progress" id="playerProgress"></div>
+                                        </div>
+                                        <div class="playback-controls">
+                                            <span class="control-btn" id="playerPrevBtn">⏮</span>
+                                            <div class="play-pause-btn control-btn" id="playerPlayBtn">▶</div>
+                                            <span class="control-btn" id="playerNextBtn">⏭</span>
+                                        </div>
+                                        <div class="spotify-logo-small">Local Library</div>
+                                    </div>
+                                    <audio id="spotifyAudio" src="songs/Ed_Sheeran_-_Perfect_Official_Music_Video_256KBPS.webm"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customizer-controls">
+                    <div class="form-group">
+                        <label>Couple Names</label>
+                        <input type="text" id="inputNames" value="Arjun & Priya" class="form-control">
+                    </div>
+                    <div class="form-group relative">
+                        <label>Your Song</label>
+                        <input type="text" id="inputSong" value="Perfect - Ed Sheeran" class="form-control" placeholder="Search song...">
+                        <div id="songResults" class="song-search-results"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Special Date</label>
+                        <input type="text" id="inputDate" value="15 March 2024" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Short Message</label>
+                        <textarea id="inputMessage" class="form-control">Happy Anniversary!</textarea>
+                    </div>
+                    <button class="btn btn-gold btn-block" onclick="alert('Added to cart with your custom details!')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Jar Customization -->
+    <section class="customization-demo" id="customize-jar-section">
+        <div class="container">
+            <h2 class="section-title">Customize <span class="gold-text">Memory Jar</span></h2>
+            <div class="customizer">
+                <div class="preview-area">
+                    <div class="product-preview">
+                        <div class="auto-scroll-gallery" id="autoGalleryJar">
+                            <img src="Memory Jar with Notes/801-create-memory-jar-1a.jpg" alt="Jar 1">
+                            <img src="Memory Jar with Notes/91QzOhzZ4UL.jpg" alt="Jar 2">
+                            <img src="Memory Jar with Notes/Glass-Memory-Jar-3.webp" alt="Jar 3">
+                            <img src="Memory Jar with Notes/New-Years-Memory-Jar-Printable-2.jpg" alt="Jar 4">
+                            <img src="Memory Jar with Notes/b10b37b623b4ccb64fd32c640f7498b8.jpg" alt="Jar 5">
+                            <img src="Memory Jar with Notes/images (1).jpg" alt="Jar 6">
+                            <img src="Memory Jar with Notes/images (2).jpg" alt="Jar 7">
+                            <img src="Memory Jar with Notes/images (3).jpg" alt="Jar 8">
+                            <img src="Memory Jar with Notes/images (4).jpg" alt="Jar 9">
+                            <img src="Memory Jar with Notes/images (5).jpg" alt="Jar 10">
+                            <img src="Memory Jar with Notes/images.jpg" alt="Jar 11">
+                            <img src="Memory Jar with Notes/nastenkapeka.avif" alt="Jar 12">
+                        </div>
+                        <div class="preview-overlay">
+                            <div class="preview-content-box">
+                                <div class="preview-text" id="previewJarTitle">Our First Year</div>
+                                <div class="preview-subtext" id="previewJarCount">52 Memories</div>
+                                <div class="preview-subtext" style="font-size: 0.9rem; font-style: italic;" id="previewJarNote">"Every week, a new reason to love you."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customizer-controls">
+                    <div class="form-group">
+                        <label>Jar Title</label>
+                        <input type="text" id="inputJarTitle" value="Our First Year" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Notes</label>
+                        <select id="inputJarCount" class="form-control">
+                            <option value="25 Memories">25 Notes</option>
+                            <option value="52 Memories" selected>52 Notes (One for every week)</option>
+                            <option value="100 Memories">100 Notes</option>
+                            <option value="365 Memories">365 Notes (One for every day)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Cover Note / Theme</label>
+                        <textarea id="inputJarNote" class="form-control">Every week, a new reason to love you.</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Jar Accent Color</label>
+                        <input type="color" id="inputJarColor" value="#F5F0FF" class="form-control" style="height: 45px; padding: 5px;">
+                    </div>
+                    <button class="btn btn-gold btn-block" onclick="alert('Memory Jar added to cart!')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Auto-scrolling gallery logic
+        function setupAutoScroll(galleryId) {
+            const gallery = document.getElementById(galleryId);
+            if (!gallery) return;
+            const images = gallery.querySelectorAll('img');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 3000);
+        }
+
+        setupAutoScroll('autoGallery');
+        setupAutoScroll('autoGalleryJar');
+
+        // Product Card Gallery Auto-scroll
+        function setupGridAutoScroll(galleryId) {
+            const gallery = document.getElementById(galleryId);
+            if (!gallery) return;
+            const images = gallery.querySelectorAll('img');
+            if (images.length <= 1) return;
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                gallery.scrollTo({
+                    left: currentIndex * gallery.offsetWidth,
+                    behavior: 'smooth'
+                });
+            }, 4000);
+        }
+        setupGridAutoScroll('jarProductGallery');
+         setupGridAutoScroll('portraitProductGallery');
+         setupGridAutoScroll('spotifyProductGallery');
+         setupGridAutoScroll('coupleArtProductGallery');
+
+        const inputNames = document.getElementById('inputNames');
+        const inputSong = document.getElementById('inputSong');
+        const inputDate = document.getElementById('inputDate');
+        const inputMessage = document.getElementById('inputMessage');
+        const previewNames = document.getElementById('previewNames');
+        const previewDetails = document.getElementById('previewDetails');
+        const livePreviewText = document.getElementById('livePreviewText');
+        const songResults = document.getElementById('songResults');
+
+        const playerSongTitle = document.getElementById('playerSongTitle');
+        const playerSongArtist = document.getElementById('playerSongArtist');
+        const playerPlayBtn = document.getElementById('playerPlayBtn');
+        const playerPrevBtn = document.getElementById('playerPrevBtn');
+        const playerNextBtn = document.getElementById('playerNextBtn');
+        const spotifyAudio = document.getElementById('spotifyAudio');
+        const playerProgress = document.getElementById('playerProgress');
+
+        let currentSongIndex = 0;
+        const mockSongs = [
+            { title: "Perfect", artist: "Ed Sheeran", url: "songs/Ed_Sheeran_-_Perfect_Official_Music_Video_256KBPS.webm" },
+            { title: "Lover", artist: "Taylor Swift", url: "songs/Taylor_Swift_-_Lover_Official_Music_Video_128kbps.mp4" },
+            { title: "Blinding Lights", artist: "The Weeknd", url: "songs/The_Weeknd_-_Blinding_Lights_Official_Video_128kbps.mp4" },
+            { title: "Shape of You", artist: "Ed Sheeran", url: "songs/Ed_Sheeran_-_Shape_of_You_Lyrics_256kbps.webm" },
+            { title: "Attention", artist: "Charlie Puth", url: "songs/Charlie_Puth_-_Attention_Lyrics_256kbps.webm" }
+        ];
+
+        function loadSong(index) {
+            currentSongIndex = index;
+            const song = mockSongs[index];
+            spotifyAudio.src = song.url;
+            inputSong.value = `${song.title} - ${song.artist}`;
+            updatePreview();
+        }
+
+        playerPlayBtn.addEventListener('click', () => {
+            if (spotifyAudio.paused) {
+                spotifyAudio.play();
+                playerPlayBtn.textContent = '⏸';
+            } else {
+                spotifyAudio.pause();
+                playerPlayBtn.textContent = '▶';
+            }
+        });
+
+        playerNextBtn.addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex + 1) % mockSongs.length;
+            loadSong(currentSongIndex);
+            spotifyAudio.play();
+            playerPlayBtn.textContent = '⏸';
+        });
+
+        playerPrevBtn.addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex - 1 + mockSongs.length) % mockSongs.length;
+            loadSong(currentSongIndex);
+            spotifyAudio.play();
+            playerPlayBtn.textContent = '⏸';
+        });
+
+        spotifyAudio.addEventListener('timeupdate', () => {
+            const progress = (spotifyAudio.currentTime / spotifyAudio.duration) * 100;
+            playerProgress.style.width = progress + '%';
+        });
+
+        function updatePreview() {
+            previewNames.textContent = inputNames.value;
+            const songName = inputSong.value.split('-')[0].trim();
+            previewDetails.textContent = `"${songName}" • ${inputDate.value}`;
+            
+            // Sync player text
+            if (playerSongTitle) playerSongTitle.textContent = songName;
+            const artistName = inputSong.value.split('-')[1]?.trim() || "Artist";
+            if (playerSongArtist) playerSongArtist.textContent = artistName;
+
+            if (livePreviewText) {
+                livePreviewText.textContent = `"${inputNames.value} • ${inputDate.value} • ${songName}"`;
+            }
+        }
+
+        inputSong.addEventListener('input', () => {
+            const query = inputSong.value.toLowerCase();
+            if (query.length < 2) {
+                songResults.style.display = 'none';
+                return;
+            }
+
+            const filtered = mockSongs.filter(s => 
+                s.title.toLowerCase().includes(query) || 
+                s.artist.toLowerCase().includes(query)
+            );
+
+            if (filtered.length > 0) {
+                songResults.innerHTML = filtered.map(s => `
+                    <div class="song-item" onclick="selectSong('${s.url}', '${s.title} - ${s.artist}')">
+                        ${s.title} - ${s.artist}
+                    </div>
+                `).join('');
+                songResults.style.display = 'block';
+            } else {
+                songResults.style.display = 'none';
+            }
+            updatePreview();
+        });
+
+        window.selectSong = function(url, text) {
+            inputSong.value = text;
+            songResults.style.display = 'none';
+            spotifyAudio.src = url;
+            spotifyAudio.play();
+            playerPlayBtn.textContent = '⏸';
+            
+            // Sync current index if possible
+            const songName = text.split(' - ')[0];
+            const index = mockSongs.findIndex(s => s.title === songName);
+            if (index !== -1) currentSongIndex = index;
+
+            updatePreview();
+        };
+
+        [inputNames, inputDate, inputMessage].forEach(input => {
+            input.addEventListener('input', updatePreview);
+        });
+
+        // Memory Jar Customizer Logic
+        const inputJarTitle = document.getElementById('inputJarTitle');
+        const inputJarCount = document.getElementById('inputJarCount');
+        const inputJarNote = document.getElementById('inputJarNote');
+        const inputJarColor = document.getElementById('inputJarColor');
+        const previewJarTitle = document.getElementById('previewJarTitle');
+        const previewJarCount = document.getElementById('previewJarCount');
+        const previewJarNote = document.getElementById('previewJarNote');
+        const livePreviewJarText = document.getElementById('livePreviewJarText');
+
+        function updateJarPreview() {
+            if (previewJarTitle) previewJarTitle.textContent = inputJarTitle.value;
+            if (previewJarCount) previewJarCount.textContent = inputJarCount.value;
+            if (previewJarNote) previewJarNote.textContent = `"${inputJarNote.value}"`;
+            if (livePreviewJarText) {
+                livePreviewJarText.textContent = `"${inputJarTitle.value} • ${inputJarCount.value}"`;
+            }
+            // Update preview background color with transparency
+            const previewArea = previewJarTitle?.closest('.preview-content-box');
+            if (previewArea) previewArea.style.backgroundColor = inputJarColor.value + 'cc';
+        }
+
+        if (inputJarTitle) {
+            [inputJarTitle, inputJarCount, inputJarNote, inputJarColor].forEach(input => {
+                input.addEventListener('input', updateJarPreview);
+            });
+        }
+
+        // Category Filter Logic
+        const categoryPills = document.querySelectorAll('.category-pill');
+        const productCards = document.querySelectorAll('.product-card');
+
+        categoryPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                // Update active pill
+                categoryPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                const selectedCategory = pill.getAttribute('data-category');
+
+                productCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-categories');
+                    if (selectedCategory === 'All' || cardCategories.includes(selectedCategory)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Close search results when clicking outside
+         document.addEventListener('click', (e) => {
+             if (!inputSong.contains(e.target)) {
+                 songResults.style.display = 'none';
+             }
+         });
+
+         // Handle category from URL parameter
+         function handleUrlCategory() {
+             const urlParams = new URLSearchParams(window.location.search);
+             const category = urlParams.get('category');
+             if (category) {
+                 const pill = document.querySelector(`.category-pill[data-category="${category}"]`);
+                 if (pill) {
+                     pill.click();
+                 }
+             }
+         }
+         handleUrlCategory();
+     </script>
+
+    <!-- Add-ons -->
+    <section class="addons">
+        <div class="container">
+            <h2 class="section-title">Make it <span class="gold-text">Extra Special</span></h2>
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <h3>Gift Wrapping</h3>
+                    <p class="price">₹75</p>
+                    <p>Premium paper with ribbon</p>
+                </div>
+                <div class="addon-card">
+                    <h3>Handwritten Letter</h3>
+                    <p class="price">₹100</p>
+                    <p>Elegant calligraphy</p>
+                </div>
+                <div class="addon-card">
+                    <h3>Surprise Gift</h3>
+                    <p class="price">₹150</p>
+                    <p>Free keychain + photo magnet</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

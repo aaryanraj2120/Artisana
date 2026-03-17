@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Program - Artisana</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <h1>Artisana<span class="gold-dot">.</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="couples.html">Couples</a></li>
+                    <li><a href="affiliate.html" class="active">Earn</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Affiliate Hero -->
+    <section class="page-hero affiliate-hero">
+        <div class="container">
+            <h1>Start <span class="gold-text">Earning</span> Today</h1>
+            <p>Turn your passion into income</p>
+        </div>
+    </section>
+
+    <!-- Commission Tiers -->
+    <section class="commission-tiers">
+        <div class="container">
+            <h2 class="section-title">Commission <span class="gold-text">Tiers</span></h2>
+            <div class="tiers-grid">
+                <div class="tier-card">
+                    <h3>New Affiliate</h3>
+                    <p class="commission">5%</p>
+                    <p>Base rate for beginners</p>
+                </div>
+                <div class="tier-card featured">
+                    <h3>Pro Artist</h3>
+                    <p class="commission">10%</p>
+                    <p>2,000-5,000 points</p>
+                    <span class="badge">Popular</span>
+                </div>
+                <div class="tier-card">
+                    <h3>Master Creator</h3>
+                    <p class="commission">15%</p>
+                    <p>5,000+ points</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Dashboard -->
+    <section class="affiliate-dashboard">
+        <div class="container">
+            <h2 class="section-title">Your <span class="gold-text">Dashboard</span></h2>
+            <div class="dashboard-card">
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-label">Today's Clicks</span>
+                        <span class="stat-value">24</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">This Month</span>
+                        <span class="stat-value">847</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Total Clicks</span>
+                        <span class="stat-value">3,245</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Conversion</span>
+                        <span class="stat-value">12.4%</span>
+                    </div>
+                </div>
+
+                <div class="referral-link">
+                    <h3>Your Referral Link</h3>
+                    <div class="link-box">
+                        <code id="refLink">artisana.in/ref/ayushiraj</code>
+                        <button id="copyRefBtn" class="btn btn-small">Copy</button>
+                    </div>
+                </div>
+
+                <div class="calendar-heatmap">
+                    <h3>Daily Performance</h3>
+                    <div class="heatmap-grid">
+                        <div class="heat-cell high"></div>
+                        <div class="heat-cell medium"></div>
+                        <div class="heat-cell low"></div>
+                        <div class="heat-cell high"></div>
+                        <div class="heat-cell high"></div>
+                        <div class="heat-cell medium"></div>
+                        <div class="heat-cell low"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Resources -->
+    <section class="marketing-resources">
+        <div class="container">
+            <h2 class="section-title">Marketing <span class="gold-text">Resources</span></h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <span class="resource-icon">📝</span>
+                    <h3>Social Captions</h3>
+                    <p>Ready-to-use captions for your posts</p>
+                    <a href="Artisana Social Media Content Guide.docx" download class="btn btn-outline">Download</a>
+                </div>
+                <div class="resource-card">
+                    <span class="resource-icon">🖼️</span>
+                    <h3>Product Images</h3>
+                    <p>High-quality images for promotion</p>
+                    <div class="download-options" style="display: flex; flex-direction: column; gap: 5px;">
+                        <a href="Spotify Glass Frame/" download class="btn btn-outline btn-small">Spotify Frames</a>
+                        <a href="Couple Name Art/" download class="btn btn-outline btn-small">Couple Art</a>
+                        <a href="Memory Jar with Notes/" download class="btn btn-outline btn-small">Memory Jars</a>
+                        <a href="Custom Portrait/" download class="btn btn-outline btn-small">Portraits</a>
+                    </div>
+                </div>
+                <div class="resource-card">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 40px; height: 40px; margin-bottom: 1rem;">
+                    <h3>GitHub</h3>
+                    <p>View our project on GitHub</p>
+                    <a href="https://github.com/aaryanraj2120" target="_blank" class="btn btn-outline">View</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('copyRefBtn');
+  var code = document.getElementById('refLink');
+  if (btn && code) {
+    btn.addEventListener('click', function () {
+      var text = code.textContent.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          btn.textContent = 'Copied';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+        });
+      } else {
+        var temp = document.createElement('textarea');
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(temp);
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      }
+    });
+  }
+});
+</script>
+</html>
